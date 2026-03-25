@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascadr — Turn One Piece of Content Into 20+</title>
+    <meta name="description" content="AI-powered content repurposing. Paste a blog post, transcript, or article. Get platform-perfect posts for Twitter, LinkedIn, Instagram, email, and more.">
+    <meta property="og:title" content="Cascadr — AI Content Repurposing">
+    <meta property="og:description" content="One input. Dozens of platform-perfect outputs. Stop manually rewriting content for every platform.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e3a5f',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: radial-gradient(ellipse at top, #1e3a5f 0%, #0f172a 70%);
+        }
+        .card-hover {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+        }
+        .platform-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="bg-brand-900 text-white">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 bg-brand-900/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold">
+                <span class="gradient-text">Cascadr</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#features" class="text-sm text-gray-300 hover:text-white hidden sm:block">Features</a>
+                <a href="#pricing" class="text-sm text-gray-300 hover:text-white hidden sm:block">Pricing</a>
+                <a href="#waitlist" class="bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">
+                    Join Waitlist
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-gradient pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block bg-brand-600/20 text-brand-300 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 border border-brand-500/20">
+                AI-Powered Content Repurposing
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                One piece of content.<br>
+                <span class="gradient-text">20+ platform-perfect posts.</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Paste a blog post, video transcript, or article. Cascadr instantly creates optimized content for Twitter, LinkedIn, Instagram, email newsletters, and more. Stop rewriting. Start cascading.
+            </p>
+            <div id="waitlist" class="max-w-md mx-auto">
+                <form id="waitlist-form" class="flex flex-col sm:flex-row gap-3">
+                    <input type="email" id="email-input" placeholder="you@company.com" required
+                        class="flex-1 px-5 py-3.5 rounded-lg bg-white/10 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+                    <button type="submit"
+                        class="bg-brand-600 hover:bg-brand-500 text-white font-semibold px-8 py-3.5 rounded-lg transition whitespace-nowrap">
+                        Get Early Access
+                    </button>
+                </form>
+                <p class="text-xs text-gray-500 mt-3">Free during beta. No credit card required.</p>
+                <div id="success-msg" class="hidden mt-4 bg-green-500/20 text-green-300 text-sm px-4 py-2 rounded-lg">
+                    You're on the list! We'll email you when Cascadr is ready.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="border-y border-white/5 py-6 px-6">
+        <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-8 text-center">
+            <div>
+                <div class="text-2xl font-bold text-white" id="waitlist-count">Join 0+ waitlist members</div>
+                <div class="text-xs text-gray-500">Growing daily</div>
+            </div>
+            <div class="hidden sm:block w-px bg-white/10"></div>
+            <div>
+                <div class="text-2xl font-bold text-white">6 Platforms</div>
+                <div class="text-xs text-gray-500">Supported at launch</div>
+            </div>
+            <div class="hidden sm:block w-px bg-white/10"></div>
+            <div>
+                <div class="text-2xl font-bold text-white">~30 Seconds</div>
+                <div class="text-xs text-gray-500">Per repurpose</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">You create great content.<br>Then it dies on one platform.</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">That blog post took 4 hours. It got 200 views. Meanwhile, you need to post on Twitter, LinkedIn, Instagram, send an email, and create YouTube shorts. Each platform wants different formats, lengths, and styles. So you don't bother. Your best ideas reach 10% of the people who need them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="features" class="py-20 px-6 bg-brand-800/30">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">How Cascadr Works</h2>
+                <p class="text-gray-400">Three steps. Thirty seconds. Done.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-8 card-hover">
+                    <div class="text-4xl mb-4">1</div>
+                    <h3 class="text-xl font-bold mb-3">Paste Your Content</h3>
+                    <p class="text-gray-400 text-sm">Blog post, podcast transcript, video script, article, newsletter — any long-form content. Just paste it in.</p>
+                </div>
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-8 card-hover">
+                    <div class="text-4xl mb-4">2</div>
+                    <h3 class="text-xl font-bold mb-3">Choose Platforms</h3>
+                    <p class="text-gray-400 text-sm">Select where you want to post: Twitter/X thread, LinkedIn post, Instagram caption, email newsletter, Reddit post, YouTube description.</p>
+                </div>
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-8 card-hover">
+                    <div class="text-4xl mb-4">3</div>
+                    <h3 class="text-xl font-bold mb-3">Get Perfect Posts</h3>
+                    <p class="text-gray-400 text-sm">AI generates platform-native content that matches each platform's tone, format, character limits, and best practices. Copy, paste, post.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Output Examples -->
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Every Platform. Perfect Format.</h2>
+                <p class="text-gray-400">Cascadr doesn't just summarize. It rewrites for each platform's unique culture and algorithm.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-6 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="platform-icon bg-black text-white">𝕏</div>
+                        <span class="font-semibold">Twitter/X Thread</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Hook-driven threads with engagement hooks, proper numbering, and natural thread flow. Optimized for replies and retweets.</p>
+                </div>
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-6 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="platform-icon bg-blue-700 text-white">in</div>
+                        <span class="font-semibold">LinkedIn Post</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Professional tone with story hooks, line breaks for readability, strategic hashtags, and engagement-driving questions.</p>
+                </div>
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-6 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="platform-icon bg-gradient-to-br from-purple-600 to-pink-500 text-white">IG</div>
+                        <span class="font-semibold">Instagram Caption</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Conversational tone, emoji-enhanced, strategic hashtag blocks, strong CTAs. Carousel slide suggestions included.</p>
+                </div>
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-6 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="platform-icon bg-brand-600 text-white">✉</div>
+                        <span class="font-semibold">Email Newsletter</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Subject line + preview text + full email body. Conversational, scannable, with clear CTA. Ready to paste into your ESP.</p>
+                </div>
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-6 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="platform-icon bg-orange-600 text-white">R</div>
+                        <span class="font-semibold">Reddit Post</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Community-appropriate tone, value-first framing, no self-promotion feel. Subreddit-aware formatting suggestions.</p>
+                </div>
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-6 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="platform-icon bg-red-600 text-white">YT</div>
+                        <span class="font-semibold">YouTube Description</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">SEO-optimized descriptions with timestamps, keywords, links section, and subscribe CTAs. Shorts script variant included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 px-6 bg-brand-800/30">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Simple, Honest Pricing</h2>
+                <p class="text-gray-400">No hidden fees. No per-word charges. Cancel anytime.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Starter -->
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-8 card-hover">
+                    <h3 class="text-lg font-bold mb-1">Starter</h3>
+                    <p class="text-gray-500 text-sm mb-4">For solo creators</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold">$29</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> 50 repurposes/month</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> 3 output platforms</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> Content history (30 days)</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> Custom tone settings</li>
+                    </ul>
+                    <a href="#waitlist" class="block text-center bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold py-3 rounded-lg transition">
+                        Join Waitlist
+                    </a>
+                </div>
+                <!-- Pro -->
+                <div class="bg-brand-900/50 border-2 border-brand-500 rounded-xl p-8 card-hover relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-xs font-bold px-4 py-1 rounded-full">
+                        MOST POPULAR
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Pro</h3>
+                    <p class="text-gray-500 text-sm mb-4">For active marketers</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold">$79</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> 200 repurposes/month</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> All 6 platforms</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> Unlimited content history</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> Custom brand voice profiles</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> Bulk repurpose (up to 10)</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> Priority generation</li>
+                    </ul>
+                    <a href="#waitlist" class="block text-center bg-brand-600 hover:bg-brand-500 text-white font-semibold py-3 rounded-lg transition">
+                        Join Waitlist
+                    </a>
+                </div>
+                <!-- Business -->
+                <div class="bg-brand-900/50 border border-white/5 rounded-xl p-8 card-hover">
+                    <h3 class="text-lg font-bold mb-1">Business</h3>
+                    <p class="text-gray-500 text-sm mb-4">For teams & agencies</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold">$199</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> Unlimited repurposes</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> All 6 platforms</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> 5 team members</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> API access</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> White-label output</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> Custom integrations</li>
+                        <li class="flex items-start gap-2"><span class="text-brand-400 mt-0.5">✓</span> Priority support</li>
+                    </ul>
+                    <a href="#waitlist" class="block text-center bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold py-3 rounded-lg transition">
+                        Join Waitlist
+                    </a>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 text-sm mt-8">All plans include a 7-day free trial. Save 17% with annual billing.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Questions & Answers</h2>
+            <div class="space-y-6">
+                <div class="border border-white/5 rounded-xl p-6">
+                    <h3 class="font-semibold mb-2">What kind of content can I paste in?</h3>
+                    <p class="text-gray-400 text-sm">Any long-form text: blog posts, articles, podcast transcripts, video scripts, newsletter drafts, meeting notes, whitepapers — anything over ~200 words. The more context Cascadr has, the better the outputs.</p>
+                </div>
+                <div class="border border-white/5 rounded-xl p-6">
+                    <h3 class="font-semibold mb-2">How is this different from ChatGPT?</h3>
+                    <p class="text-gray-400 text-sm">ChatGPT is a general chatbot. Cascadr is a specialized tool built specifically for content repurposing. Every output is optimized for the target platform's format, character limits, culture, and algorithm preferences. You don't need to write prompts or know what works on each platform — Cascadr does.</p>
+                </div>
+                <div class="border border-white/5 rounded-xl p-6">
+                    <h3 class="font-semibold mb-2">Can I customize the output tone?</h3>
+                    <p class="text-gray-400 text-sm">Yes. You can set brand voice profiles (professional, casual, witty, authoritative, etc.) and Cascadr will match your tone across all platforms while adapting to each platform's norms.</p>
+                </div>
+                <div class="border border-white/5 rounded-xl p-6">
+                    <h3 class="font-semibold mb-2">What's a "repurpose"?</h3>
+                    <p class="text-gray-400 text-sm">One repurpose = one piece of source content transformed into outputs for your selected platforms. If you paste a blog post and select Twitter + LinkedIn + Email, that's one repurpose producing three outputs.</p>
+                </div>
+                <div class="border border-white/5 rounded-xl p-6">
+                    <h3 class="font-semibold mb-2">Do I own the output content?</h3>
+                    <p class="text-gray-400 text-sm">Yes, 100%. Everything Cascadr generates is yours to use, publish, modify, and monetize however you want.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-6 bg-brand-800/30">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Stop Rewriting. Start Cascading.</h2>
+            <p class="text-gray-400 mb-8">Join the waitlist for early access and launch pricing. Free during beta.</p>
+            <form id="waitlist-form-bottom" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" placeholder="you@company.com" required
+                    class="flex-1 px-5 py-3.5 rounded-lg bg-white/10 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+                <button type="submit"
+                    class="bg-brand-600 hover:bg-brand-500 text-white font-semibold px-8 py-3.5 rounded-lg transition whitespace-nowrap">
+                    Get Early Access
+                </button>
+            </form>
+            <div id="success-msg-bottom" class="hidden mt-4 bg-green-500/20 text-green-300 text-sm px-4 py-2 rounded-lg">
+                You're on the list! We'll email you when Cascadr is ready.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-8 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="text-sm text-gray-500">
+                &copy; 2026 Peakstone Innovations LLC. All rights reserved.
+            </div>
+            <div class="flex gap-6 text-sm text-gray-500">
+                <a href="#" class="hover:text-gray-300">Terms</a>
+                <a href="#" class="hover:text-gray-300">Privacy</a>
+                <a href="mailto:hello@cascadr.io" class="hover:text-gray-300">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Waitlist form handling — stores to localStorage for now, will connect to backend
+        const forms = document.querySelectorAll('#waitlist-form, #waitlist-form-bottom');
+        const waitlistKey = 'cascadr_waitlist';
+
+        function getWaitlist() {
+            try { return JSON.parse(localStorage.getItem(waitlistKey) || '[]'); } catch { return []; }
+        }
+
+        function updateCount() {
+            const count = getWaitlist().length;
+            const el = document.getElementById('waitlist-count');
+            if (el && count > 0) el.textContent = `Join ${count}+ waitlist members`;
+        }
+
+        forms.forEach(form => {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const emailInput = form.querySelector('input[type="email"]');
+                const email = emailInput.value.trim();
+                if (!email) return;
+
+                // Store locally
+                const list = getWaitlist();
+                if (!list.includes(email)) {
+                    list.push(email);
+                    localStorage.setItem(waitlistKey, JSON.stringify(list));
+                }
+
+                // Show success
+                const msgId = form.id === 'waitlist-form' ? 'success-msg' : 'success-msg-bottom';
+                document.getElementById(msgId).classList.remove('hidden');
+                emailInput.value = '';
+                updateCount();
+
+                // Try to send to backend (will work once API is live)
+                try {
+                    await fetch('/api/waitlist', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, source: 'landing_page', timestamp: new Date().toISOString() })
+                    });
+                } catch (err) {
+                    // Backend not live yet — localStorage capture is the fallback
+                    console.log('Waitlist stored locally. Backend not connected yet.');
+                }
+            });
+        });
+
+        updateCount();
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>
