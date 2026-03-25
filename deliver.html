@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Purchase — AI Content Repurposing Prompt Library</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        code, pre, .prompt-block { font-family: 'JetBrains Mono', monospace; }
+        .prompt-block {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 12px 0;
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        .copy-btn:hover { background: #2563eb; }
+        .section-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-200">
+
+    <!-- Header -->
+    <div class="bg-green-500/10 border-b border-green-500/20 px-6 py-4 text-center">
+        <p class="text-green-400 font-semibold">Payment confirmed. This is your product — bookmark this page.</p>
+    </div>
+
+    <!-- Section Navigation -->
+    <div class="section-nav bg-gray-950/90 border-b border-gray-800 px-6 py-3">
+        <div class="max-w-4xl mx-auto flex flex-wrap gap-2 justify-center text-xs">
+            <a href="#twitter" class="bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-full">Twitter/X (8)</a>
+            <a href="#linkedin" class="bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-full">LinkedIn (8)</a>
+            <a href="#instagram" class="bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-full">Instagram (7)</a>
+            <a href="#email" class="bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-full">Email (8)</a>
+            <a href="#reddit" class="bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-full">Reddit (4)</a>
+            <a href="#youtube" class="bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-full">YouTube (5)</a>
+            <a href="#advanced" class="bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-full">Advanced (7)</a>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <h1 class="text-3xl font-bold mb-2">47 AI Content Repurposing Prompts</h1>
+        <p class="text-gray-500 mb-8">By Peakstone Innovations. Click "Copy" on any prompt, paste into Claude/ChatGPT, replace [YOUR CONTENT].</p>
+
+        <!-- How to Use -->
+        <div class="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 mb-12">
+            <h2 class="text-blue-400 font-semibold mb-3">How to Use</h2>
+            <ol class="space-y-2 text-sm text-gray-300">
+                <li><strong>1.</strong> Click "Copy" on any prompt below</li>
+                <li><strong>2.</strong> Paste into Claude, ChatGPT, Gemini, or any AI tool</li>
+                <li><strong>3.</strong> Replace <code class="bg-gray-800 px-2 py-0.5 rounded text-blue-300">[YOUR CONTENT]</code> with your blog post, transcript, or article</li>
+                <li><strong>4.</strong> Get platform-perfect output instantly</li>
+            </ol>
+        </div>
+
+        <!-- TWITTER SECTION -->
+        <div id="twitter" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-sm font-bold">𝕏</span>
+                Twitter/X Prompts (8)
+            </h2>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">1. Blog Post → Twitter Thread</h3>
+            <div class="prompt-block" id="p1">
+                <button class="copy-btn" onclick="copyPrompt('p1')">Copy</button>Transform this blog post into a Twitter/X thread of 5-10 tweets.
+
+Rules:
+- Tweet 1 must be a scroll-stopping hook (no "Thread:" prefix)
+- Each tweet ≤ 280 characters
+- Number tweets with "1/" format
+- Use short sentences and line breaks within tweets
+- Include a "plot twist" or counterintuitive insight by tweet 3-4
+- Final tweet: strong CTA (follow, retweet, bookmark, or reply)
+- No hashtags except optionally 1-2 in the final tweet
+- Tone: conversational, like explaining to a smart friend over coffee
+
+Blog post:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">2. Key Insight → Viral Tweet</h3>
+            <div class="prompt-block" id="p2">
+                <button class="copy-btn" onclick="copyPrompt('p2')">Copy</button>Extract the single most surprising or counterintuitive insight from this content and write ONE standalone tweet (≤ 280 characters).
+
+The tweet must:
+- Lead with the unexpected conclusion, not the setup
+- Create an "I need to share this" reaction
+- Be self-contained (no thread needed)
+- End with implied curiosity (the reader wants to know more)
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">3. Data/Stats → Twitter Carousel Thread</h3>
+            <div class="prompt-block" id="p3">
+                <button class="copy-btn" onclick="copyPrompt('p3')">Copy</button>Extract every statistic, data point, and quantifiable claim from this content. Write a Twitter thread where each tweet presents one data point with brief context.
+
+Format per tweet:
+[Surprising number or stat]
+[1-sentence context that makes it meaningful]
+
+Thread should be 5-8 tweets. Start with the most shocking stat. End with "What surprised you most? Reply below."
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">4. Article → Twitter Poll + Context Tweet</h3>
+            <div class="prompt-block" id="p4">
+                <button class="copy-btn" onclick="copyPrompt('p4')">Copy</button>Based on this content, create:
+1. A poll question (≤ 280 chars) with 2-4 answer options that will generate debate
+2. A follow-up tweet to post as a reply with the "correct" answer and reasoning
+3. A thread of 3-4 tweets expanding on the topic for engagement after the poll closes
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">5. Long-Form → Contrarian Tweet Storm</h3>
+            <div class="prompt-block" id="p5">
+                <button class="copy-btn" onclick="copyPrompt('p5')">Copy</button>Read this content and identify the most contrarian or against-conventional-wisdom angle. Write a 5-tweet thread arguing this position.
+
+Structure:
+Tweet 1: Bold contrarian statement
+Tweet 2: "Here's why everyone gets this wrong"
+Tweet 3-4: Evidence and reasoning
+Tweet 5: Reframe that makes the reader reconsider their assumption
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">6. How-To → Step-by-Step Thread</h3>
+            <div class="prompt-block" id="p6">
+                <button class="copy-btn" onclick="copyPrompt('p6')">Copy</button>Convert this how-to content into a tactical step-by-step Twitter thread.
+
+Rules:
+- Tweet 1: "Here's how to [outcome] in [timeframe]:" (hook)
+- Each subsequent tweet = one step
+- Each step: action verb + specific instruction + expected result
+- Keep each tweet ≤ 250 chars to leave room for engagement
+- Final tweet: "Follow me for more [topic] breakdowns" + bookmark CTA
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">7. Story/Case Study → Twitter Narrative</h3>
+            <div class="prompt-block" id="p7">
+                <button class="copy-btn" onclick="copyPrompt('p7')">Copy</button>Retell this story or case study as a Twitter narrative thread (6-10 tweets).
+
+Structure:
+Tweet 1: Hook with the outcome/result (start at the end)
+Tweet 2: "But it didn't start that way..." (tension)
+Tweets 3-7: The journey (challenges, turning points, decisions)
+Tweet 8-9: The resolution and key lesson
+Tweet 10: Universal takeaway + engagement CTA
+
+Write like a storyteller, not a summarizer.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">8. Content → Quote Graphics Text</h3>
+            <div class="prompt-block" id="p8">
+                <button class="copy-btn" onclick="copyPrompt('p8')">Copy</button>Extract 5-7 quotable lines from this content that would work as standalone quote graphics (Twitter image posts).
+
+Each quote must:
+- Be ≤ 100 characters (fits nicely on a graphic)
+- Be profound, surprising, or motivational when read without context
+- Work as a "save this" type of post
+
+Also write a caption tweet (≤ 280 chars) for each graphic.
+
+Content:
+[YOUR CONTENT]</div>
+        </div>
+
+        <!-- Remaining sections follow the same pattern — abbreviated for deployment speed -->
+        <!-- The full content continues with LinkedIn (9-16), Instagram (17-23), Email (24-31), Reddit (32-35), YouTube (36-40), Advanced (41-47) -->
+
+        <div id="linkedin" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center text-sm font-bold">in</span>
+                LinkedIn Prompts (8)
+            </h2>
+            <p class="text-gray-400 text-sm mb-4">Prompts 9-16 optimized for LinkedIn's algorithm and professional audience.</p>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">9. Blog Post → LinkedIn Post</h3>
+            <div class="prompt-block" id="p9"><button class="copy-btn" onclick="copyPrompt('p9')">Copy</button>Transform this blog post into a LinkedIn post optimized for the algorithm and professional audience.
+
+Structure:
+- Line 1: Hook that earns the "see more" click (must be compelling in ≤ 150 chars)
+- Line 2: Empty line
+- Lines 3-15: The core insight broken into short paragraphs (1-2 sentences each)
+- Each paragraph separated by empty lines
+- Include ONE personal anecdote or "I" statement (LinkedIn rewards vulnerability)
+- End with a question that invites comments
+- After the question: 3-5 relevant hashtags
+- Total length: 1,000-1,300 characters
+
+Tone: Professional but human. Not corporate-speak.
+
+Blog post:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">10. Data/Research → Authority Post</h3>
+            <div class="prompt-block" id="p10"><button class="copy-btn" onclick="copyPrompt('p10')">Copy</button>Transform this data-heavy content into a LinkedIn post that positions the author as a thought leader.
+
+Structure:
+- Open with a bold claim or prediction backed by the data
+- Present 3-5 key findings as a numbered list
+- After each finding: one sentence of "what this means for [industry]"
+- Close with "Here's what I'd recommend based on this:" + 2-3 actionable takeaways
+- End with engagement question
+- 5 industry-specific hashtags
+
+Tone: Confident expert sharing insights, not academic paper.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">11. How-To → LinkedIn Listicle</h3>
+            <div class="prompt-block" id="p11"><button class="copy-btn" onclick="copyPrompt('p11')">Copy</button>Convert this how-to content into a LinkedIn listicle post.
+
+Format:
+- Hook: "[Number] things I wish I knew about [topic] when I started:"
+- Empty line
+- Each item: number + emoji + bold key phrase + 1-sentence explanation
+- Each item separated by empty line
+- Close with: "Which one resonates most with you?" or "What would you add to this list?"
+- 3-5 hashtags
+
+Keep total under 1,500 characters. Each item should be independently valuable.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">12. Case Study → Story Post</h3>
+            <div class="prompt-block" id="p12"><button class="copy-btn" onclick="copyPrompt('p12')">Copy</button>Transform this case study into a LinkedIn story post using the "problem → struggle → solution → result" framework.
+
+Structure:
+- Line 1: The result/outcome (start with the win)
+- Empty line
+- "Here's the backstory:"
+- 3-4 short paragraphs telling the journey
+- "The key insight that changed everything:"
+- 1-2 sentences with the core lesson
+- "My takeaway:" + universal principle
+- Engagement question
+- Hashtags
+
+Tone: Genuine, reflective, not braggy.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">13. Blog → Carousel Text</h3>
+            <div class="prompt-block" id="p13"><button class="copy-btn" onclick="copyPrompt('p13')">Copy</button>Convert this blog post into content for a LinkedIn carousel (document post).
+
+Output:
+- Slide 1: Bold headline + subheadline (hook — this is what people see in the feed)
+- Slides 2-8: One key point per slide. Format: headline + 2-3 bullet points
+- Final slide: Summary + CTA ("Follow for more" / "Save this for later")
+
+Each slide should have ≤ 40 words. Think visual — these will be designed as slides.
+Also write the post caption (200-300 characters) that accompanies the carousel.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">14. Article → Poll + Discussion</h3>
+            <div class="prompt-block" id="p14"><button class="copy-btn" onclick="copyPrompt('p14')">Copy</button>Based on this content, create:
+
+1. A LinkedIn poll:
+   - Question (≤ 140 characters)
+   - 4 answer options (≤ 30 characters each)
+   - Poll description post (≤ 500 characters) giving context
+
+2. A follow-up discussion post to publish after the poll closes:
+   - Reference the poll results
+   - Share your perspective based on the original content
+   - 800-1,200 characters
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">15. Lesson Learned → Reflection Post</h3>
+            <div class="prompt-block" id="p15"><button class="copy-btn" onclick="copyPrompt('p15')">Copy</button>Extract the core lesson from this content and write a LinkedIn reflection post.
+
+Structure:
+- Line 1: "I used to believe [old belief]. I was wrong."
+- Empty line
+- 3-4 paragraphs: What changed your mind (tie to content)
+- "What I believe now:"
+- New perspective in 2-3 sentences
+- "Has anyone else experienced this shift? I'd love to hear your story."
+- Hashtags
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">16. Content → Newsletter Intro</h3>
+            <div class="prompt-block" id="p16"><button class="copy-btn" onclick="copyPrompt('p16')">Copy</button>Write a LinkedIn newsletter introduction based on this content.
+
+Requirements:
+- Compelling title (≤ 60 characters)
+- Subtitle (≤ 100 characters)
+- Opening paragraph that hooks the reader (why this matters NOW)
+- 3-5 section headers with 2-3 sentence previews under each
+- Closing paragraph with CTA to subscribe
+
+Tone: Expert sharing valuable insights with their professional network.
+
+Content:
+[YOUR CONTENT]</div>
+        </div>
+
+        <!-- Instagram -->
+        <div id="instagram" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-gradient-to-br from-purple-600 to-pink-500 rounded-lg flex items-center justify-center text-sm font-bold">IG</span>
+                Instagram Prompts (7)
+            </h2>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">17. Blog → Instagram Caption</h3>
+            <div class="prompt-block" id="p17"><button class="copy-btn" onclick="copyPrompt('p17')">Copy</button>Transform this blog post into an Instagram caption.
+
+Requirements:
+- First line: Hook that makes people tap "more" (≤ 125 characters)
+- Body: Conversational, relatable, like talking to a friend
+- Use line breaks between paragraphs
+- Sprinkle in 2-4 relevant emojis (not excessive)
+- Include a clear CTA: save, share, comment, or "link in bio"
+- After CTA: two empty lines, then a hashtag block of 20-25 hashtags
+- Mix hashtag sizes: 5 large (500K+ posts), 10 medium (50K-500K), 5-10 small (&lt;50K)
+- Total caption: 1,000-2,000 characters (before hashtags)
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">18. Content → Carousel Slides</h3>
+            <div class="prompt-block" id="p18"><button class="copy-btn" onclick="copyPrompt('p18')">Copy</button>Convert this content into an Instagram carousel post (slides).
+
+Output:
+- Slide 1: Attention-grabbing headline (≤ 8 words) + subtext
+- Slides 2-9: One key point per slide (bold headline ≤ 6 words + 1-2 supporting sentences)
+- Slide 10: CTA slide ("Save this for later" / "Share with someone who needs this")
+
+Also write: Caption (500-800 characters), 25 hashtags organized by size, suggested posting time.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">19. Tips → Reel Script</h3>
+            <div class="prompt-block" id="p19"><button class="copy-btn" onclick="copyPrompt('p19')">Copy</button>Convert this how-to content into a 30-60 second Instagram Reel script.
+
+Structure:
+- Hook (first 1-3 seconds): Question or bold statement that stops the scroll
+- Setup (5-10 seconds): Quick context on the problem
+- Steps/Tips (20-40 seconds): 3-5 actionable points, rapid-fire delivery
+- CTA (3-5 seconds): "Follow for more [topic]" or "Save this"
+
+Include: On-screen text suggestions, trending audio suggestion, caption with hashtags.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">20. Story → Instagram Story Sequence</h3>
+            <div class="prompt-block" id="p20"><button class="copy-btn" onclick="copyPrompt('p20')">Copy</button>Break this content into an Instagram Story sequence (5-8 stories).
+
+For each story: text overlay (≤ 25 words), background suggestion, interactive element (poll/quiz/question box). At least 2 stories should have interactive elements.
+
+Story 1: Hook/teaser → Stories 2-6: Key points → Story 7: CTA
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">21. Content → Quote Posts (Batch)</h3>
+            <div class="prompt-block" id="p21"><button class="copy-btn" onclick="copyPrompt('p21')">Copy</button>Extract 5 quotable moments from this content. For each: quote text (≤ 80 chars), caption (200-400 chars), 15 hashtags. Quotes should be self-contained, shareable, and a mix of inspirational/tactical/thought-provoking.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">22. Blog → Guide Content</h3>
+            <div class="prompt-block" id="p22"><button class="copy-btn" onclick="copyPrompt('p22')">Copy</button>Organize this blog post content for an Instagram Guide. Output: Guide title (≤ 40 chars), description (≤ 150 chars), 5-10 post concepts with headline, type (image/carousel/reel), brief description, and caption preview.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">23. Content → Bio Update</h3>
+            <div class="prompt-block" id="p23"><button class="copy-btn" onclick="copyPrompt('p23')">Copy</button>Based on this content and topic expertise, suggest 3 Instagram bio versions (≤ 150 chars each, include: what you do + who you help + CTA, 1-2 emojis). Also suggest a link-in-bio page structure (5-7 links).
+
+Content:
+[YOUR CONTENT]</div>
+        </div>
+
+        <!-- Email -->
+        <div id="email" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-sm font-bold">✉</span>
+                Email Newsletter Prompts (8)
+            </h2>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">24. Blog Post → Newsletter Issue</h3>
+            <div class="prompt-block" id="p24"><button class="copy-btn" onclick="copyPrompt('p24')">Copy</button>Transform this blog post into an email newsletter issue.
+
+Output:
+- Subject line (≤ 50 characters, curiosity-driven, no clickbait)
+- Preview text (≤ 90 characters, complements the subject)
+- Greeting: casual "Hey [first name],"
+- Opening hook: 2-3 sentences connecting to a relatable moment
+- Body: Key insights restructured for scannable reading (subheadings, bold key phrases, short paragraphs)
+- Primary CTA: Clear, specific, one main ask
+- P.S. line: Secondary CTA or personal note
+- Total body: 300-500 words
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">25. Multiple Pieces → Roundup</h3>
+            <div class="prompt-block" id="p25"><button class="copy-btn" onclick="copyPrompt('p25')">Copy</button>Transform multiple content pieces into a curated newsletter roundup. Format: subject line, preview text, personal intro, each piece with section header + 2-3 sentence summary + "Read more →", quick hits section, closing. 400-600 words total.
+
+Content pieces:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">26. Content → Welcome Sequence (5 emails)</h3>
+            <div class="prompt-block" id="p26"><button class="copy-btn" onclick="copyPrompt('p26')">Copy</button>Write a 5-email welcome sequence for new subscribers.
+
+Email 1 (Day 0): Welcome + deliver lead magnet + set expectations
+Email 2 (Day 2): Best insight from this content (pure value)
+Email 3 (Day 4): Story/case study that builds credibility
+Email 4 (Day 7): Common mistake or myth-busting
+Email 5 (Day 10): Soft pitch for paid product + social proof
+
+For each: subject line, preview text, full body copy, CTA.
+Tone: knowledgeable friend genuinely trying to help.
+
+Content/Topic:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">27. Blog → Email Course (5-Part)</h3>
+            <div class="prompt-block" id="p27"><button class="copy-btn" onclick="copyPrompt('p27')">Copy</button>Break this blog post into a 5-part email course. Each lesson: subject line, title, key concept (1-2 paragraphs), exercise/action item, teaser for next lesson. 250-400 words per email. Course builds progressively.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">28. Content → Re-engagement Email</h3>
+            <div class="prompt-block" id="p28"><button class="copy-btn" onclick="copyPrompt('p28')">Copy</button>Write a re-engagement email for subscribers who haven't opened in 30+ days. Subject line with FOMO/curiosity (not guilt). "Here's what you've been missing" with 3 highlights. CTA: "Click here if you still want to hear from me." Under 200 words.
+
+Content to reference:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">29. How-To → Actionable Newsletter</h3>
+            <div class="prompt-block" id="p29"><button class="copy-btn" onclick="copyPrompt('p29')">Copy</button>Transform this how-to content into a "do this now" actionable newsletter. Subject: "Do this today: [action]". One big idea, step-by-step instructions, common mistakes (2-3 bullets), homework with deadline, "Reply and tell me" CTA. Under 400 words.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">30. Content → Teaser Email</h3>
+            <div class="prompt-block" id="p30"><button class="copy-btn" onclick="copyPrompt('p30')">Copy</button>Write a teaser email that drives clicks to read the full content. Subject (≤ 50 chars) with information gap. Opening with most surprising claim (don't reveal answer). 2-3 bullet teasers. CTA: "Read the full breakdown here →". P.S. with additional hook. Under 150 words.
+
+Content to tease:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">31. Content → Segmented Variants</h3>
+            <div class="prompt-block" id="p31"><button class="copy-btn" onclick="copyPrompt('p31')">Copy</button>Write 3 versions of the same newsletter for different segments:
+Version A — Beginners: simple, more context, encouraging
+Version B — Intermediate: skip basics, focus on tactics
+Version C — Advanced: lead with data, challenge assumptions
+
+Each: unique subject line, 300-400 words, appropriate CTA.
+
+Content:
+[YOUR CONTENT]</div>
+        </div>
+
+        <!-- Reddit -->
+        <div id="reddit" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">R</span>
+                Reddit Prompts (4)
+            </h2>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">32. Blog → Reddit Post</h3>
+            <div class="prompt-block" id="p32"><button class="copy-btn" onclick="copyPrompt('p32')">Copy</button>Transform this blog post into a Reddit post. Descriptive title (not clickbait). Lead with value, personal story second. Reddit formatting (**bold**, bullets, quotes). TL;DR at end. NO self-promotion feel. Suggest 3 subreddits. 300-600 words.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">33. Content → AMA Prep</h3>
+            <div class="prompt-block" id="p33"><button class="copy-btn" onclick="copyPrompt('p33')">Copy</button>Prepare an AMA post. Title: "I [credibility marker]. AMA!" Introduction (200-300 words), 10 anticipated questions with answers, suggested subreddits, best posting time.
+
+Content/expertise:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">34. How-To → Reddit Guide</h3>
+            <div class="prompt-block" id="p34"><button class="copy-btn" onclick="copyPrompt('p34')">Copy</button>Convert to Reddit guide post. Title: "[Guide] How to [outcome] — Step by step." Table of contents, actionable steps per section, "mistakes I made" section, resources, TL;DR. First person, authentic.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">35. Content → Reddit Comment Strategy</h3>
+            <div class="prompt-block" id="p35"><button class="copy-btn" onclick="copyPrompt('p35')">Copy</button>Write 5 Reddit comments for relevant threads. Each: thread type it responds to, actual comment (100-200 words), genuinely helpful with no links or plugs. These should get upvoted because they're the best answer.
+
+Content:
+[YOUR CONTENT]</div>
+        </div>
+
+        <!-- YouTube -->
+        <div id="youtube" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center text-sm font-bold">YT</span>
+                YouTube Prompts (5)
+            </h2>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">36. Blog → YouTube Script</h3>
+            <div class="prompt-block" id="p36"><button class="copy-btn" onclick="copyPrompt('p36')">Copy</button>Transform this blog post into a YouTube video script (8-12 minutes). Hook (0:00-0:30), Intro (0:30-1:00), Body with 3-5 sections (1:00-9:00), Recap (9:00-10:00), CTA (10:00-10:30). Include [B-ROLL] and [ON-SCREEN TEXT] suggestions. Natural, conversational tone.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">37. Content → Shorts Scripts (Batch of 5)</h3>
+            <div class="prompt-block" id="p37"><button class="copy-btn" onclick="copyPrompt('p37')">Copy</button>Extract 5 angles and write a YouTube Short script for each (30-60 seconds). Each: hook (3 seconds), body (20-45 seconds), closer (5-10 seconds), on-screen text suggestions, estimated duration. Each stands alone.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">38. Blog → YouTube Description</h3>
+            <div class="prompt-block" id="p38"><button class="copy-btn" onclick="copyPrompt('p38')">Copy</button>Write an SEO-optimized YouTube description. Lines 1-2: summary with primary keyword. "In this video:" bullets. Timestamps section. Resources section. Connect section. 3-5 hashtags. 300-500 words, keyword-rich but natural.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">39. Content → Community Posts</h3>
+            <div class="prompt-block" id="p39"><button class="copy-btn" onclick="copyPrompt('p39')">Copy</button>Write 3 YouTube Community posts: Post 1 — Poll (question + 4 options), Post 2 — Text update teasing upcoming video, Post 3 — Quote graphic text + caption. Each drives engagement.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">40. Content → Title & Thumbnail Text</h3>
+            <div class="prompt-block" id="p40"><button class="copy-btn" onclick="copyPrompt('p40')">Copy</button>Generate 5 YouTube title options (≤ 60 chars each, mix of curiosity gap/how-to/number-based/contrarian/result-driven) and 5 thumbnail text options (≤ 6 words each, high contrast, creates curiosity, complements title).
+
+Content:
+[YOUR CONTENT]</div>
+        </div>
+
+        <!-- Advanced -->
+        <div id="advanced" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-sm font-bold">+</span>
+                Advanced & Cross-Platform (7)
+            </h2>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">41. One Blog → Full 2-Week Content Calendar</h3>
+            <div class="prompt-block" id="p41"><button class="copy-btn" onclick="copyPrompt('p41')">Copy</button>Transform this blog post into a complete 2-week content calendar. Table: Day | Platform | Content Type | Topic/Angle. Include: 2 tweets/day, 1 LinkedIn/day (weekdays), 3 Instagram/week, 2 emails/week, 1 Reddit/week, 1 YouTube/week. Each piece uses a DIFFERENT angle.
+
+Blog post:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">42. Content → Lead Magnet Outline</h3>
+            <div class="prompt-block" id="p42"><button class="copy-btn" onclick="copyPrompt('p42')">Copy</button>Design a lead magnet (checklist/cheatsheet/template/mini-guide). Output: title (≤ 10 words), format, outline, landing page headline + subheadline + 3-5 bullets, thank you page copy, delivery email copy.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">43. Content → Podcast Show Notes</h3>
+            <div class="prompt-block" id="p43"><button class="copy-btn" onclick="copyPrompt('p43')">Copy</button>Create podcast show notes: episode title (≤ 60 chars), description for directories (≤ 250 words), detailed notes with timestamps, 3 key takeaways, resources, listener CTA.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">44. Content → Webinar Outline</h3>
+            <div class="prompt-block" id="p44"><button class="copy-btn" onclick="copyPrompt('p44')">Copy</button>Create a 45-60 minute webinar outline. Title, registration page copy, minute-by-minute outline, 5 slides text per section, post-webinar 3-email follow-up sequence.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">45. Content → Sales Page Sections</h3>
+            <div class="prompt-block" id="p45"><button class="copy-btn" onclick="copyPrompt('p45')">Copy</button>Transform into sales page copy: hero section (headline + subheadline + CTA), problem section (3 pain points), solution section, benefits (5-7 bullet points), social proof section, FAQ (5 objection-handling Q&As), final CTA with urgency + guarantee. Direct-response style.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">46. Content → Slide Deck</h3>
+            <div class="prompt-block" id="p46"><button class="copy-btn" onclick="copyPrompt('p46')">Copy</button>Create a 15-20 slide presentation. Each slide: number, headline (≤ 8 words), 2-4 bullets or visual description, speaker notes (2-3 sentences). One idea per slide, no walls of text.
+
+Content:
+[YOUR CONTENT]</div>
+
+            <h3 class="text-lg font-semibold mb-2 text-gray-300">47. Content → 5-Day Email Micro-Course</h3>
+            <div class="prompt-block" id="p47"><button class="copy-btn" onclick="copyPrompt('p47')">Copy</button>Create a free 5-day email micro-course. Each day: subject line, title, core concept (150-250 words), example, action item (completeable in &lt;15 min), next-day teaser. Day 5 includes soft pitch for paid product. Also: course title, landing page copy, welcome email.
+
+Content:
+[YOUR CONTENT]</div>
+        </div>
+
+        <!-- Meta Framework -->
+        <div class="bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/20 rounded-xl p-8 mb-12">
+            <h2 class="text-xl font-bold mb-4">The Meta-Repurposing Framework</h2>
+            <p class="text-gray-400 text-sm mb-4">For maximum extraction from one piece of content:</p>
+            <ol class="space-y-2 text-sm text-gray-300">
+                <li>1. Write the pillar piece (blog, script, transcript)</li>
+                <li>2. Prompt 41 → plan the full calendar</li>
+                <li>3. Prompt 1 or 6 → Twitter threads</li>
+                <li>4. Prompt 9 or 11 → LinkedIn</li>
+                <li>5. Prompt 17 or 18 → Instagram</li>
+                <li>6. Prompt 24 or 29 → Email</li>
+                <li>7. Prompt 36 or 37 → YouTube</li>
+                <li>8. Prompt 32 → Reddit</li>
+                <li>9. Prompt 42 → Lead magnet</li>
+                <li>10. Prompt 47 → Email course</li>
+            </ol>
+            <p class="text-blue-400 font-semibold mt-4">One blog post → 20+ pieces across 6 platforms + lead magnet + email course.</p>
+        </div>
+
+        <!-- Cascadr CTA -->
+        <div class="text-center py-8 border-t border-gray-800">
+            <p class="text-gray-400 mb-2">Want this automated? Try Cascadr — AI-powered content repurposing in 30 seconds.</p>
+            <a href="https://mcs116.github.io/cascadr-site/" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3 rounded-xl transition">Try Cascadr Free</a>
+        </div>
+
+        <footer class="text-center text-gray-600 text-xs pt-8 pb-4">
+            &copy; 2026 Peakstone Innovations LLC. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        function copyPrompt(id) {
+            const el = document.getElementById(id);
+            const btn = el.querySelector('.copy-btn');
+            // Get text content excluding the button
+            const text = el.textContent.replace('Copy', '').trim();
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Copied!';
+                btn.style.background = '#22c55e';
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                    btn.style.background = '#3b82f6';
+                }, 2000);
+            });
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
